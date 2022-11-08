@@ -14,6 +14,8 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <script>
         function add(){
             var var1,var2,var3,var4;
@@ -21,10 +23,18 @@
             var2 = parseInt(document.getElementByID("var2").value);
             var3 = parseInt(document.getElementByID("var3").value);
             var4 = parseInt(document.getElementByID("var4").value);
+
+            sum1 = var1+var2;
+            sum2 = var3+var4;
+            sum3 = var1+var3;
+            sum4 = var2+var4;
+
+            document.getElementById("var1+var2").value = sum1;
+            document.getElementById("var3+var4").value = sum2;
+            document.getElementById("var1+var3").value = sum3;
+            document.getElementById("var2+var4").value = sum4;
         }
     </script>
-</head>
-<body>
     <div class="row text-center">
         <div class="col-md-4">
             <div class="input-group mb-3">
@@ -42,23 +52,23 @@
                             <td>Fee Receipts For The Day</td>
                             <td><input type="text" id="var1" /></td>
                             <td><input type="text" id="var2" /></td>
-                            <td></td>  
+                            <td><input type="text" id="var1+var2"></td>  
                         </tr>
                         <tr scope="row">
                             <td>Cash Position As</td> 
                             <td><input type="text" id="var3" /></td> 
                             <td><input type="text" id="var4" /></td>
-                            <td></td> 
+                            <td id="var3+var4"></td> 
                         </tr>
                         <tr scope="row">
                             <td>Total</td> 
-                            <td></td> 
-                            <td></td>
+                            <td id="var1+var3"></td> 
+                            <td id="var2+var4"></td>
                             <td></td> 
                         </tr>
                     </tbody>
                 </table>
-            <button>total</button>
+            <button type="button" onclick="add()">total</button>
             </div>
         </div>
     </div>
