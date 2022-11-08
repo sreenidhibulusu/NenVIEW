@@ -14,6 +14,35 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css">
+    <script>
+        function add(){
+            var var1,var2,var3,var4;
+            tf1 = parseInt(document.getElementById("tf1").value);
+            tf2 = parseInt(document.getElementById("tf2").value);
+            tf3 = parseInt(document.getElementById("tf3").value);
+            tf4 = parseInt(document.getElementById("tf4").value);
+            var1 = parseInt(document.getElementById("var1").value);
+            var2 = parseInt(document.getElementById("var2").value);
+            var3 = parseInt(document.getElementById("var3").value);
+            var4 = parseInt(document.getElementById("var4").value);
+
+            sum1 = tf1+var1;
+            sum2 = tf2+var2;
+            sum3 = tf3+var3;
+            sum4 = tf4+var4;
+            sum5 = tf1+tf2-tf3-tf4;
+            sum6 = var1+var2-var3-var4;
+            sum7 = tf1+tf2-tf3-tf4+var1+var2-var3-var4;
+
+            document.getElementById("tf1+var1").innerHTML = sum1;
+            document.getElementById("tf2+var2").innerHTML = sum2;
+            document.getElementById("tf3+var3").innerHTML = sum3;
+            document.getElementById("tf4+var4").innerHTML = sum4;
+            document.getElementById("tf1+tf2-tf3-tf4").innerHTML=sum5;
+            document.getElementById("var1+var2-var3-var4").innerHTML=sum6;
+            document.getElementById("tf1+tf2-tf3-tf4+var1+var2-var3-var4").innerHTML=sum7;
+        }
+    </script>
 </head>
 <body>
     <div class="row text-center">
@@ -33,31 +62,31 @@
                     <tbody>
                         <tr scope="row">
                             <td>Tuition Fee</td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
-                            <td></td>  
+                            <td><input type="text" id="tf1" name="fname" /></td>
+                            <td><input type="text" id="tf2" name="fname" /></td>
+                            <td><input type="text" id="tf3" name="fname" /></td>
+                            <td><input type="text" id="tf4" name="fname" /></td>
+                            <td><p><span id="tf1+tf2-tf3-tf4" style="display: block;"></span></p></td>  
                         </tr>
                         <tr scope="row">
                             <td>Trasport</td> 
-                            <td><input type="text" name="fname" /></td> 
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td> 
-                            <td><input type="text" name="fname" /></td> 
-                            <td></td> 
+                            <td><input type="text" id="var1" name="fname" /></td> 
+                            <td><input type="text" id="var2" name="fname" /></td>
+                            <td><input type="text" id="var3" name="fname" /></td> 
+                            <td><input type="text" id="var4" name="fname" /></td> 
+                            <td><p><span id="var1+var2-var3-var4" style="display: block;"></span></p></td> 
                         </tr>
                         <tr scope="row">
                             <td>Total</td> 
-                            <td></td> 
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td> 
+                            <td><p><span id="tf1+var1" style="display: block;"></span></p></td> 
+                            <td><p><span id="tf2+var2" style="display: block;"></span></p></td>
+                            <td><p><span id="tf3+var3" style="display: block;"></span></p></td>
+                            <td><p><span id="tf4+var4" style="display: block;"></span></p></td>
+                            <td><p><span id="tf1+tf2-tf3-tf4+var1+var2-var3-var4" style="display: block;"></span></p></td> 
                         </tr>
                     </tbody>
                 </table>
-                <a type="button" href="" name="log" id="log" value="Total">Total</a>
+                <button href="" name="log" id="log" value="Total" onclick ="add()">Total</button>
                 <a type="button" href="options5.html" name="log" id="log" value="Next">Next</a>
             </div>
         </div>
