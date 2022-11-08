@@ -26,11 +26,13 @@
             sum2 = var3+var4;
             sum3 = var1+var3;
             sum4 = var2+var4;
+            sum5 = var1+var2+var3+var4;
 
-            document.getElementById("var1+var2").value = sum1;
+            document.getElementById("var1+var2").innerHTML = sum1;
             document.getElementById("var3+var4").innerHTML = sum2;
-            document.getElementById("var1+var3").value = sum3;
-            document.getElementById("var2+var4").value = sum4;
+            document.getElementById("var1+var3").innerHTML = sum3;
+            document.getElementById("var2+var4").innerHTML = sum4;
+            document.getElementById("var1+var2+var3+var4").innerHTML=sum5;
         }
     </script>
 </head>
@@ -52,7 +54,7 @@
                             <td>Fee Receipts For The Day</td>
                             <td><input type="text" id="var1" /></td>
                             <td><input type="text" id="var2" /></td>
-                            <td><input id="var1+var2"></td>  
+                            <td><p><span id="var1+var2" style="display: block;"></span></p></td>  
                         </tr>
                         <tr scope="row">
                             <td>Cash Position As</td> 
@@ -62,9 +64,9 @@
                         </tr>
                         <tr scope="row">
                             <td>Total</td> 
-                            <td id="var1+var3"></td> 
-                            <td id="var2+var4"></td>
-                            <td><p><span id="var3+var4" style="display: block;"></span></p></td> 
+                            <td id="var1+var3"><p><span id="var1+var3" style="display: block;"></span></p></td> 
+                            <td id="var2+var4"><p><span id="var2+var4" style="display: block;"></span></p></td>
+                            <td><p><span id="var1+var2+var3+var4" style="display: block;"></span></p></td> 
                         </tr>
                     </tbody>
                 </table>
