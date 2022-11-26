@@ -14,6 +14,45 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="style.css">
+    <script>
+        function add(){
+            var var1,var2,var3,var4,var5,var6,var7,var8,var9,var10,var11,var12;
+            var1 = parseInt(document.getElementById("var1").value);
+            var2 = parseInt(document.getElementById("var2").value);
+            var3 = parseInt(document.getElementById("var3").value);
+            var4 = parseInt(document.getElementById("var4").value);
+            var5 = parseInt(document.getElementById("var5").value);
+            var6 = parseInt(document.getElementById("var6").value);
+            var7 = parseInt(document.getElementById("var7").value);
+            var8 = parseInt(document.getElementById("var8").value);
+            var9 = parseInt(document.getElementById("var9").value);
+            var10 = parseInt(document.getElementById("var10").value);
+            var11= parseInt(document.getElementById("var11").value);
+            var12 = parseInt(document.getElementById("var12").value);
+            
+            sum1=var2-var3;
+            sum2=var5-var6;
+            sum3=var8-var9;
+            sum4=var11-var12;
+            csum1=var1+var4+var7+var10;
+            csum2=var2+var5+var8+var11;
+            csum3=var3+var6+var9+var12;
+            csum4=sum1+sum2+sum3+sum4;
+
+            document.getElementById("var2-var3").innerHTML = sum1;
+            document.getElementById("var5-var6").innerHTML = sum2;
+            document.getElementById("var8-var9").innerHTML = sum3;
+            document.getElementById("var11-var12").innerHTML = sum4;
+
+            document.getElementById("var1+var4+var7+var10").innerHTML = csum1;
+            document.getElementById("var2+var5+var8+var11").innerHTML = csum2;
+            document.getElementById("var3+var6+var9+var12").innerHTML = csum3;
+            document.getElementById("sum1+sum2+sum3+sum4").innerHTML = csum4;
+        }
+    </script>
+
+
+    
 </head>
 <body>
     <div class="row text-center">
@@ -35,7 +74,7 @@
                             <td><input type="text" name="fname" /></td>
                             <td><input type="text" name="fname" /></td>
                             <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>  
+                            <td><input type="text" name="fname" /></td>
                         </tr>
                         <tr scope="row">
                             <td>2022-23</td>
@@ -46,43 +85,46 @@
                         </tr>
                         <tr scope="row">
                             <td>I Year</td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
+                            <td><input type="text" id="var1" /></td>
+                            <td><input type="text" id="var2" /></td>
+                            <td><input type="text" id="var3" /></td>
+                            <td><p><span id="var2-var3" style="display: block;"></span></p></td> 
                         </tr>
                         <tr scope="row">
                             <td>II Year</td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
+                            <td><input type="text" id="var4" /></td>
+                            <td><input type="text" id="var5" /></td>
+                            <td><input type="text" id="var6" /></td>
+                            <td><p><span id="var5-var6" style="display: block;"></span></p></td> 
+                            
                         </tr>
                         <tr scope="row">
                             <td>III Year</td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
+                            <td><input type="text" id="var7" /></td>
+                            <td><input type="text" id="var8" /></td>
+                            <td><input type="text" id="var9" /></td>
+                            <td><p><span id="var8-var9" style="display: block;"></span></p></td> 
                         </tr>
                         <tr scope="row">
                             <td>IV Year</td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
-                            <td><input type="text" name="fname" /></td>
+                            <td><input type="text" id="var10" /></td>
+                            <td><input type="text" id="var11" /></td>
+                            <td><input type="text" id="var12" /></td>
+                            <td><p><span id="var11-var12" style="display: block;"></span></p></td> 
                         </tr>
                         <tr scope="row">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>TOTAL</td>
+                            <td><p><span id="var1+var4+var7+var10" style="display: block;"></span></p></td> 
+                            <td><p><span id="var2+var5+var8+var11" style="display: block;"></span></p></td> 
+                            <td><p><span id="var3+var6+var9+var12" style="display: block;"></span></p></td> 
+                            <td><p><span id="sum1+sum2+sum3+sum4" style="display: block;"></span></p></td> 
                         </tr>
                     </tbody>
                 </table>
-                <a type="button" href="" name="log" id="log" value="Total">Total</a>
-                <a type="button" href="options8.html" name="log" id="log" value="Next">Next</a>
+                <div class="buttons">
+                    <button href="" name="log" id="log" value="Total" onclick ="add()"  >Total</button>
+                    <a type="button" href="options8.html" name="log" id="log" value="Next">Next</a>
+                </div>
             </div>
         </div>
     </div>
